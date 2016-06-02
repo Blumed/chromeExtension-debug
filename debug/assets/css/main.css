@@ -2,7 +2,7 @@
 	background-color: green;
 }
 .debuggerer {
-  border: 1px solid red !important;
+  box-shadow:inset 0px 0px 0px 1px red;
 } 
 .shadererer {
 	background-color: rgba(2,2,2, .2);
