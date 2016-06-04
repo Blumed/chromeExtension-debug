@@ -1,22 +1,4 @@
 
-//This works
-chrome.browserAction.setBadgeText({"text": "1234567"});
-
-// chrome.runtime.onMessage.addListener(function(response) {
-//   // It is recommended to add a message type so your code
-//   //   can be ready for more types of messages in the future
-
-//   //alert(response.type);
-// });
-// Called when the user clicks on the browser action.
-
-
-// $('#submitBorders').on('click', function(){
-// 	var customSelectors = $('#inputBorders').val(); 
-// 	chrome.runtime.sendMessage({message: customSelectors});
-// 	alert(customSelectors);
-
-// });
 var background = {
     selector: "",
     init: function() {
@@ -36,7 +18,11 @@ var background = {
 
     getSelectors: function(request, sender, sendResponse) {
         sendResponse(this.selector);
-    }
+    },
+
+    // removeSelectors: function(request, sender, sendResponse) {
+    //     sendResponse(this.selector);
+    // }
 }
 
 

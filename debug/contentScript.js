@@ -1,35 +1,12 @@
 //Badge
-var windowWidth = $(window).width();
-console.log(windowWidth);
+// function removeClass() {
+//   chrome.tabs.executeScript({
+//     file: 'windowWidth.js'
+//   }); 
+// }
 
-var data = windowWidth
-
-function sendMessage(data) {
-    if (data) {
-        chrome.runtime.sendMessage({ type: data }); // false here can be replaced with
-    } // a function. Explanation below (1).
-}
-
-
-// var customSelectors = document.getElementById('inputBorders'),
-//     customSelectorsInput = document.getElementById('submitBorders');
-
+//Adds debuggerer class
 chrome.runtime.sendMessage({ fn: "getSelectors" }, function(response) {
     console.log(response);
     $(response).addClass('debuggerer');
 });
-
-
-
-
-
-// content.js
-// chrome.runtime.onMessage.addListener(
-//   function(request, sender, sendResponse) {
-//     if( request.message === "clicked_browser_action" ) {
-//       var firstHref = $("a[href^='http']").eq(0).attr("href");
-
-//       console.log(firstHref);
-//     }
-//   }
-// );
