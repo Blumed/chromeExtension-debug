@@ -18,11 +18,7 @@ var background = {
 
     getSelectors: function(request, sender, sendResponse) {
         sendResponse(this.selector);
-    },
-
-    // removeSelectors: function(request, sender, sendResponse) {
-    //     sendResponse(this.selector);
-    // }
+    }
 }
 
 

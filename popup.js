@@ -60,7 +60,8 @@ var app = {
         //Removing Selectors
         removeSelectorsBtn.addEventListener('click', function() {
             //Need to clear input field
-            customSelectors.value = "";
+            customSelectors.value = ""; 
+            customSelectors.focus();
             //console.log('button click' + ' ' + customSelectors.value);
             chrome.runtime.sendMessage({ fn: "setSelectors", selector: removeCustomeSelectors });
             console.log('clear clicked');

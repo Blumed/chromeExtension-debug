@@ -31,6 +31,10 @@
     "browser_action": {
         "default_icon": "assets/images/icon.png",
         "default_popup": "popup.html"
+    },
+    "icons": { "16": "assets/images/icon.png",
+           "48": "assets/images/icon.png",
+          "128": "assets/images/icon.png" 
     }
 
 
