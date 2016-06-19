@@ -1,6 +1,7 @@
 
 var background = {
     selector: "",
+    style: "",
     init: function() {
 
         chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
@@ -11,14 +12,20 @@ var background = {
             });
     },
 
-    setSelectors: function(request, sender, sendResponse) {
-    	//console.log('setting selectors', request.selector);
+    setSelections: function(request, sender, sendResponse) {
+    	console.log('setting selectors', request.selector);
+        console.log('setting selectors', request.style);
         this.selector = request.selector;
+        this.style = request.style;
     },
 
-    getSelectors: function(request, sender, sendResponse) {
-        sendResponse(this.selector);
+    getSelector: function(request, sender, sendResponse) {
+        sendResponse({selector: this.selector, style: this.style});
     }
+
+    // getStyle: function(request, sender, sendResponse) {
+    //     sendResponse(this.style);
+    // }
 }
 
 

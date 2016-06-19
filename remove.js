@@ -1,1 +1,2 @@
-$('*').removeClass('debuggerer')
+
+    $('*').removeClass('borderererzzz shaderererzzz bothemememzzz');
