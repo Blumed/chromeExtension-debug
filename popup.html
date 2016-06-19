@@ -25,9 +25,9 @@
     }
     #shaderererzzz {
         position: relative;
-        width: 11px;
-        height: 11px;
-        border: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid transparent;
         background-color: #ccc;
         color: white;
         padding: .5rem;
@@ -44,13 +44,27 @@
         padding: .5rem;
         text-transform: uppercase;
     }
+    input {
+        background-color: #eee;
+        border: 0;
+        margin-bottom: 1rem;
+    }
     input, button {
-        outline-width: 1px;
-        outline-color: red;
+        outline: 0;
+        box-shadow: 0px 0px 0px 2px transparent;
+        transition: box-shadow 0.3s;
+       /* transition: all .3s ease;
+         transform: translate3d(0, 0, 0);*/
+    }
+    input:focus, button:focus {
+         background-color: pink !important;
+        /*border-color: hsl(200, 100%, 50%);*/
+            /*box-shadow: inset 0px 0px 0px 1px grey;*/
+
     }
     
     #inputBorders {
-        width: 90%;
+        width: 92%;
         padding: .5rem;
     }
     
@@ -84,17 +98,19 @@
         text-align: center;
         margin: 1rem 0;
     }
-    .selector-styles button {
-        transition: all 1s ease;
-    }
+
     .is-active:after {
         content: "";
         position: absolute;
         top: 0;
-        left: 0;
+        left: -1px;
+        transform: translate3d(0, 0, 0);
         border-bottom: 1px solid red;
         height: 1.3rem;
-        width: 1rem;
+        width: 18px;
+    }
+    .selector-styles button {
+        transition: all .3s ease;
     }
     </style>
 </head>

@@ -43,7 +43,7 @@ var app = {
 
         //Adding Selectors
         chrome.runtime.sendMessage({ fn: "getSelector" }, function(response) {
-           console.log("got selector" + response.selector);
+           //console.log("got selector" + response.selector);
             if(response === "") {
                removeCustomeSelectors = response.selector;
                //console.log("you are here" + customSelectors.value);
@@ -78,7 +78,7 @@ var app = {
         //Removing Selectors
         removeSelectorsBtn.addEventListener('click', function() {
             //Need to clear input field
-            console.log('Clear was clicked');
+            // console.log('Clear was clicked');
             customSelectors.value = ""; 
             customSelectors.focus();
             var currentStyle = $('button.is-active').attr('id');

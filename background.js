@@ -13,8 +13,8 @@ var background = {
     },
 
     setSelections: function(request, sender, sendResponse) {
-    	console.log('setting selectors', request.selector);
-        console.log('setting selectors', request.style);
+    	//console.log('setting selectors', request.selector);
+        //console.log('setting selectors', request.style);
         this.selector = request.selector;
         this.style = request.style;
     },
