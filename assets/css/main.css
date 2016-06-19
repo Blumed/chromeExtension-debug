@@ -1,7 +1,10 @@
 /* response.style */
 .borderererzzz {
   box-shadow:inset 0px 0px 0px 1px red;
-} 
+}
+img.borderererzzz {
+	border: 1px solid red;
+}
 .shaderererzzz {
 	background-color: rgba(2,2,2, .2);
 }
